@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Julieth">
+    <meta name="copyright" content="fuentepropia">
+	<link rel="shorcut icon" href="./Logo.jpeg">
+    <title>Login</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body class="bg-indigo-200 flex items-center justify-center p-4 min-h-screen">
+        <form id="loginForm">
+            <div class="bg-white w-full sm:w-96 p-6 sm:p-10 rounded">
+                <div class="flex items-center justify-center mb-6 flex-col gap-4">
+                    <img src="Logo.jpeg" class="h-24 sm:h-32 w-auto">
+                    <h1 class="text-xl sm:text-2xl font-semibold text-center">Seguimiento a tus Finanzas</h1>
+                </div>
+                
+                <div id="mensajeError" class="hidden bg-red-100 text-red-700 p-3 rounded mb-4 text-sm">
+                    <span id="textoError"></span>
+                </div>
+
+                <label for="Usuario" class="block text-sm font-semibold mb-2">Nombre de Usuario</label>
+                <input type="text" id="Usuario" name="Usuario" class="w-full py-2 px-3 bg-gray-100 mb-4 rounded border border-gray-300 focus:outline-none focus:border-indigo-400" required>
+                
+                <label for="contra" class="block text-sm font-semibold mb-2">Contraseña</label>
+                <input type="password" id="contra" name="Contraseña" class="w-full py-2 px-3 bg-gray-100 mb-4 rounded border border-gray-300 focus:outline-none focus:border-indigo-400" required>
+                
+                <button class="bg-indigo-400 w-full py-2 rounded hover:bg-indigo-600 transition-colors font-semibold text-white" type="submit">Ingresar</button>
+                
+                <a href="#" class="block mt-3 text-center text-sm text-gray-600 hover:text-gray-800">¿Olvidó su contraseña?</a>
+                
+                <div class="mt-6 p-3 bg-gray-100 rounded text-xs text-gray-600">
+                    <p><strong>Credenciales de prueba:</strong></p>
+                    <p>Usuario: <code>admin</code></p>
+                    <p>Contraseña: <code>1234</code></p>
+                </div>
+            </div>
+        </form>
+
+        <script src="./auth.js"></script>
+</body>
+<footer>
+</footer>
+</html>
+
+

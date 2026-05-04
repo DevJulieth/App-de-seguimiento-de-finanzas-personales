@@ -1,0 +1,33 @@
+{
+    "name": "seguimiento-finanzas",
+    "version": "1.0.0",
+    "description": "Aplicación para el seguimiento de finanzas personales",
+    "main": "server.js",
+    "scripts": {
+        "build:css": "npx @tailwindcss/cli -i ./src/input.css -o ./public/styles.css",
+        "watch:css": "npx @tailwindcss/cli -i ./src/input.css -o ./public/styles.css --watch 2>&1 | findstr /V \"Done in\"",
+        "start": "node server.js",
+        "dev:server": "nodemon server.js",
+        "dev:sync": "browser-sync start --config bs-config.js",
+        "dev": "concurrently \"npm run watch:css\" \"npm run dev:server\" \"npm run dev:sync\""
+    },
+    "keywords": [
+        "finanzas",
+        "personal",
+        "javascript",
+        "localStorage"
+    ],
+    "author": "Julieth Ochoa",
+    "license": "MIT",
+    "devDependencies": {
+        "@tailwindcss/cli": "^4.2.4",
+        "browser-sync": "^3.0.2",
+        "concurrently": "^9.2.1",
+        "live-server": "^1.2.2",
+        "nodemon": "^3.1.14",
+        "tailwindcss": "^4.2.4"
+    },
+    "dependencies": {
+        "express": "^4.18.2"
+    }
+}
